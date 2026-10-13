@@ -3,7 +3,7 @@ name: Build and Push WebGoat Docker Image (Corretto JDK)
 on:
   push:
     branches:
-      - main
+    - main
   workflow_dispatch:
 
 jobs:
@@ -41,7 +41,8 @@ jobs:
           docker build \
             -t ${{ secrets.DOCKERHUB_USERNAME }}/webgoat:latest \
             -t ${{ secrets.DOCKERHUB_USERNAME }}/webgoat:v8.2.0-SNAPSHOT \
-            -f Dockerfile .
+            -f ./webgoat-server/Dockerfile \
+            webgoat-server
 
       # 6. Docker Hub로 이미지 푸시
       - name: Push Docker image
