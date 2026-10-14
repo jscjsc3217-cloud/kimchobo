@@ -1,4 +1,4 @@
-== What is WebGoat?
+== What is WebGoat? (Auto Deploy Test)
 ---
 
 WebGoat is a deliberately insecure application that allows interested developers just like you to _test vulnerabilities_
